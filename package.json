@@ -1,0 +1,22 @@
+{
+  "name": "aspastebot",
+  "version": "1.0.0",
+  "description": "A telegram bot which can paste your text/code and short URLS using https://del.dog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AffanTheBest/AsPasteBot.git"
+  },
+  "author": "AffanTheBest",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AffanTheBest/AsPasteBot/issues"
+  },
+  "homepage": "https://github.com/AffanTheBest/AsPasteBot#readme",
+  "dependencies": {
+    "telegraf": "^4.3.0"
+  }
+}
