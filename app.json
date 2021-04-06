@@ -17,11 +17,5 @@
           "url": "heroku/nodejs"
       }
   ],
-    "addons": [],
-    "formation": {
-        "worker": {
-            "quantity": 1,
-            "size": "free"
-        }
-    }
+    "addons": []
   }
