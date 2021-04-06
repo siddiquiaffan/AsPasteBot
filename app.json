@@ -1,0 +1,27 @@
+{
+    "name": "As Paste bot",
+    "description": "A telegram bot which can paste your text/code and short URLS using https://del.dog",
+    "keywords": [
+      "dogbin",
+      "pastebin",
+      "url-shortner",
+      "hastebin"
+    ],
+    "repository": "https://github.com/AffanTheBest/AsPasteBot",
+    "website": "https://t.me/AffanTheBest",
+    "scripts": {
+      "worker": "npm start"
+    },
+    "buildpacks": [
+      {
+          "url": "heroku/nodejs"
+      }
+  ],
+    "addons": [],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+  }
