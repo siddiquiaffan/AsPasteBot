@@ -1,7 +1,7 @@
 const {Telegraf} = require('telegraf');
 const axios = require('axios');
 const validUrl = require('valid-url');
-const token = process.env.BOT_TOKEN;
+const token = process.env.BOT_TOKEN || '1716065789:AAHWSl50RMh1nb1TPosoxU9jAiIPQJxgKBI';
 const default_btn = [
     { text: "Join Channel", url: "https://t.me/asprojects" },
     { text: "Support Group", url: "https://t.me/assupportchat" },
@@ -11,7 +11,7 @@ const bot = new Telegraf(token);
 
 const paste = (ctx , text) => {
     if(text.length > 0) {
-        text += '\n\nPasted by https://t.me/AsPasteBot'
+        validUrl.isUri(text) ? text : text += '\n\nPasted by https://t.me/AsPasteBot'
         ctx.replyWithMarkdown('`Hang on! Pasting your text...`' , {
             reply_to_message_id: ctx.update.message.message_id,
             allow_sending_without_reply: true,})
@@ -101,7 +101,6 @@ bot.command('paste', ctx => {
 //! /getpaste command
 bot.command("/getpaste" , ctx => {
     const url = ctx.message.text.split("/getpaste ")[1];
-    validUrl.isUri(url) && url.includes("del.dog/") ? console.log(url) :console.log("not valid");
     validUrl.isUri(url) && url.includes("del.dog/") ?
      getPaste(ctx , url) : 
      ctx.replyWithMarkdown("Please send a valid url to get pasted content.", {
