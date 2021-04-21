@@ -1,7 +1,7 @@
 const {Telegraf} = require('telegraf');
 const axios = require('axios');
 const validUrl = require('valid-url');
-const token = process.env.BOT_TOKEN || '1716065789:AAHWSl50RMh1nb1TPosoxU9jAiIPQJxgKBI';
+const token = process.env.BOT_TOKEN;
 const default_btn = [
     { text: "Join Channel", url: "https://t.me/asprojects" },
     { text: "Support Group", url: "https://t.me/assupportchat" },
